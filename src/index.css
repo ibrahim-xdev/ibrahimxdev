@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, sans-serif;
+  --font-body: "Inter", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  --bg: #0b0e17;
+  --bg-alt: #0f1320;
+  --surface: 255 255 255;
+  --surface-alpha: 0.06;
+  --border-alpha: 0.12;
+  --text: #e8eaf2;
+  --text-muted: #8b93a7;
+  --accent-1: #6c63ff;
+  --accent-2: #22d3ee;
+  --accent-1-rgb: 108 99 255;
+  --accent-2-rgb: 34 211 238;
+}
+
+.light {
+  --bg: #eef1f8;
+  --bg-alt: #e4e8f3;
+  --surface: 20 24 40;
+  --surface-alpha: 0.045;
+  --border-alpha: 0.08;
+  --text: #161a2c;
+  --text-muted: #5b6178;
+  --accent-1: #5a4bff;
+  --accent-2: #0891b2;
+  --accent-1-rgb: 90 75 255;
+  --accent-2-rgb: 8 145 178;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+::selection {
+  background: rgb(var(--accent-1-rgb) / 0.35);
+  color: var(--text);
+}
+
+.glass {
+  background: rgb(var(--surface) / var(--surface-alpha));
+  border: 1px solid rgb(var(--surface) / var(--border-alpha));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-strong {
+  background: rgb(var(--surface) / calc(var(--surface-alpha) * 1.8));
+  border: 1px solid rgb(var(--surface) / calc(var(--border-alpha) * 1.4));
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glow-ring {
+  box-shadow: 0 0 0 1px rgb(var(--surface) / var(--border-alpha)),
+    0 8px 30px -10px rgb(var(--accent-1-rgb) / 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--surface) / 0.18);
+  border-radius: 999px;
+}
