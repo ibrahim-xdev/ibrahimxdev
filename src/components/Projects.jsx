@@ -12,9 +12,7 @@ function ProjectCard({ project }) {
             "radial-gradient(circle, var(--accent-1) 0%, transparent 70%)",
         }}
       />
-      <h3 className="font-[var(--font-display)] text-xl font-semibold">
-        {project.title}
-      </h3>
+      <h3 className="text-xl font-semibold">{project.title}</h3>
       <p
         className="mt-3 flex-1 text-sm leading-relaxed"
         style={{ color: "var(--text-muted)" }}
@@ -27,7 +25,7 @@ function ProjectCard({ project }) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="glass rounded-full px-3 py-1 font-[var(--font-mono)] text-xs"
+              className="glass rounded-full px-3 py-1 font(--font-mono)] text-xs"
               style={{ color: "var(--accent-2)" }}
             >
               {tag}
@@ -67,10 +65,8 @@ function ProjectCard({ project }) {
 function EmptyState() {
   return (
     <div className="project-reveal glass rounded-3xl border-dashed p-10 text-center">
-      <p className="font-[var(--font-display)] text-lg font-medium">
-        Projects coming soon
-      </p>
-      <p
+      <p className="font-medium text-lg">Projects coming soon</p>
+      {/* <p
         className="mx-auto mt-2 max-w-md text-sm leading-relaxed"
         style={{ color: "var(--text-muted)" }}
       >
@@ -78,7 +74,7 @@ function EmptyState() {
         array in{" "}
         <code className="font-[var(--font-mono)]">src/data/content.js</code>{" "}
         and they'll appear here as cards automatically.
-      </p>
+      </p> */}
     </div>
   );
 }
@@ -91,12 +87,12 @@ export default function Projects() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="project-reveal mb-12">
           <p
-            className="font-[var(--font-mono)] text-xs tracking-widest"
+            className="font-(--font-mono)] text-xs tracking-widest"
             style={{ color: "var(--accent-2)" }}
           >
             PROJECTS
           </p>
-          <h2 className="mt-3 font-[var(--font-display)] text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
             Selected work
           </h2>
         </div>
