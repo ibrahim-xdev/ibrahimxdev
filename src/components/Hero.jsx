@@ -88,25 +88,29 @@ export default function Hero() {
           </div>
 
           <div className="hero-card relative mx-auto w-full max-w-sm">
-            <div className="glass-strong glow-ring relative overflow-hidden rounded-3xl p-8 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/30">
+            <div className="group glass-strong glow-ring relative overflow-hidden rounded-3xl p-8 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/30">
+              {/* Hover Glow */}
               <div
-                className="absolute -top-16 -right-16 h-40 w-40 rounded-full opacity-50 blur-3xl"
+                className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-60"
                 style={{
                   background:
                     "radial-gradient(circle, var(--accent-1) 0%, transparent 70%)",
                 }}
               />
+
               <p
-                className="font-[var(--font-mono)] text-xs"
+                className="relative font-[var(--font-mono)] text-xs"
                 style={{ color: "var(--text-muted)" }}
               >
                 Currently building
               </p>
-              <p className="mt-3 font-[var(--font-display)] text-lg font-semibold">
+
+              <p className="relative mt-3 font-[var(--font-display)] text-lg font-semibold">
                 Scalable web apps
                 <br />& AI-driven software
               </p>
-              <div className="mt-6 space-y-3">
+
+              <div className="relative mt-6 space-y-3">
                 {["Frontend", "Backend", "AI / ML"].map((row, i) => (
                   <div key={row} className="flex items-center gap-3">
                     <span
@@ -116,6 +120,7 @@ export default function Hero() {
                           i % 2 === 0 ? "var(--accent-1)" : "var(--accent-2)",
                       }}
                     />
+
                     <span
                       className="font-[var(--font-mono)] text-sm"
                       style={{ color: "var(--text-muted)" }}
