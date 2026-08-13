@@ -110,8 +110,6 @@ textarea:focus-visible {
   background: rgb(var(--surface) / 0.18);
   border-radius: 999px;
 }
-
-/* Custom Cursor */
 /* ========================================
    Custom Cursor
 ======================================== */
@@ -130,9 +128,11 @@ textarea:focus-visible {
     cursor: none;
   }
 
+  /* Main Cursor */
   .custom-cursor {
     width: 28px;
     height: 28px;
+
     margin-left: -14px;
     margin-top: -14px;
 
@@ -163,9 +163,11 @@ textarea:focus-visible {
     will-change: transform;
   }
 
+  /* Center Dot */
   .custom-cursor-dot {
     width: 5px;
     height: 5px;
+
     border-radius: 50%;
 
     background: var(--accent-2);
@@ -175,10 +177,11 @@ textarea:focus-visible {
       0 0 18px var(--accent-2);
   }
 
-  /* Cursor when hovering buttons/links */
+  /* Hover Cursor */
   .custom-cursor.cursor-hover {
     width: 48px;
     height: 48px;
+
     margin-left: -24px;
     margin-top: -24px;
 
@@ -196,9 +199,13 @@ textarea:focus-visible {
     height: 7px;
   }
 
-  /* Trail */
+  /* ========================================
+     Cursor Trail
+  ======================================== */
+
   .cursor-trail {
     position: fixed;
+
     left: 0;
     top: 0;
 
@@ -217,14 +224,19 @@ textarea:focus-visible {
 
     transition:
       opacity 0.25s ease,
-      width 0.25s ease,
-      height 0.25s ease;
+      background 0.25s ease,
+      box-shadow 0.25s ease;
 
     will-change: transform;
   }
 
+  /* Fade the trail */
+  .cursor-trail:nth-child(1) {
+    opacity: 0.9;
+  }
+
   .cursor-trail:nth-child(2) {
-    opacity: 0.85;
+    opacity: 0.8;
   }
 
   .cursor-trail:nth-child(3) {
@@ -267,7 +279,7 @@ textarea:focus-visible {
     opacity: 0.1;
   }
 
-  /* Trail becomes stronger over interactive elements */
+  /* Trail over links/buttons */
   .cursor-trail.trail-hover {
     background: var(--accent-2);
 
@@ -277,7 +289,10 @@ textarea:focus-visible {
   }
 }
 
-/* Don't show custom cursor on touch devices */
+/* ========================================
+   Touch Devices
+======================================== */
+
 @media (pointer: coarse) {
   .custom-cursor-layer,
   .custom-cursor {
