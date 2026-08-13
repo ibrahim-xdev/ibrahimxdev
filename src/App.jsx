@@ -14,17 +14,19 @@ export default function App() {
   return (
     <ThemeProvider>
       <CustomCursor />
-      <AuroraBackground />
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
+      <div className="relative z-10">
+        <AuroraBackground />
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </ThemeProvider>
   );
 }

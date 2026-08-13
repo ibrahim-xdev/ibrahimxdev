@@ -63,8 +63,12 @@ body {
 .glass-strong {
   background: rgb(var(--surface) / calc(var(--surface-alpha) * 1.8));
   border: 1px solid rgb(var(--surface) / calc(var(--border-alpha) * 1.4));
+
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
+
+  backdrop-saturate: 150%;
+  -webkit-backdrop-saturate: 150%;
 }
 
 .text-gradient {

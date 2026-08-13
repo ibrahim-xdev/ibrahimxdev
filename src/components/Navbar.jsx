@@ -92,7 +92,13 @@ export default function Navbar() {
       </Container>
 
       {open && (
-        <div className="glass-strong mx-4 mt-2 flex flex-col gap-1 rounded-2xl p-3 md:hidden">
+        <div
+          className="mx-4 mt-2 flex flex-col gap-1 rounded-2xl border p-3 backdrop-blur-[30px] backdrop-saturate-150 md:hidden"
+          style={{
+            background: "rgb(var(--surface) / 0.12)",
+            borderColor: "rgb(var(--surface) / 0.14)",
+          }}
+        >
           {links.map((link) => (
             <a
               key={link.href}
