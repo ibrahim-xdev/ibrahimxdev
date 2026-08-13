@@ -23,8 +23,8 @@ export default function Contact() {
             className="contact-reveal mt-4 max-w-md text-base leading-relaxed"
             style={{ color: "var(--text-muted)" }}
           >
-            Open to full-stack and AI engineering opportunities — reach out
-            however's easiest.
+            Open for opportunities in full-stack developmenent. Based in
+            Islambad, Pakistan. Available worldwide.
           </p>
 
           <div className="contact-reveal glass-strong glow-ring mt-10 flex max-w-md flex-col items-center gap-5 rounded-3xl p-8">
