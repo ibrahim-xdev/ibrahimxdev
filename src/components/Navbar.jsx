@@ -31,7 +31,7 @@ export default function Navbar() {
       <Container>
         {" "}
         <nav
-          className={`flex items-center justify-between rounded-2xl py-3 transition-all duration-300 sm:px-6 ${
+          className={`flex items-center justify-between rounded-2xl py-3 px-1 transition-all duration-300 sm:px-6 ${
             scrolled ? "glass-strong" : ""
           }`}
         >
