@@ -8,10 +8,12 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
+import CustomCursor from "./components/CustomCursor";
 
 export default function App() {
   return (
     <ThemeProvider>
+      <CustomCursor />
       <AuroraBackground />
       <Navbar />
       <main>
