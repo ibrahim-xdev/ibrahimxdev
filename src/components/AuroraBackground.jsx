@@ -1,9 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-// A slow-drifting mesh of gradient blobs behind the glass panels —
-// evokes neural / signal activity, tying the AI-engineer identity
-// to the glassmorphism surfaces without being literal about it.
 export default function AuroraBackground() {
   const containerRef = useRef(null);
 
@@ -33,22 +30,27 @@ export default function AuroraBackground() {
       aria-hidden="true"
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
     >
+      {/* Purple / Blue Glow */}
       <div
-        className="aurora-blob absolute -top-40 left-[10%] h-[32rem] w-[32rem] rounded-full opacity-40 blur-[110px]"
+        className="aurora-blob absolute -top-40 left-[10%] h-[32rem] w-[32rem] rounded-full opacity-30 blur-[150px]"
         style={{
           background:
             "radial-gradient(circle, var(--accent-1) 0%, transparent 70%)",
         }}
       />
+
+      {/* Cyan Glow */}
       <div
-        className="aurora-blob absolute top-1/3 right-[5%] h-[26rem] w-[26rem] rounded-full opacity-30 blur-[100px]"
+        className="aurora-blob absolute top-1/3 right-[5%] h-[26rem] w-[26rem] rounded-full opacity-25 blur-[140px]"
         style={{
           background:
             "radial-gradient(circle, var(--accent-2) 0%, transparent 70%)",
         }}
       />
+
+      {/* Bottom Glow */}
       <div
-        className="aurora-blob absolute bottom-0 left-[25%] h-[30rem] w-[30rem] rounded-full opacity-20 blur-[120px]"
+        className="aurora-blob absolute bottom-0 left-[25%] h-[30rem] w-[30rem] rounded-full opacity-15 blur-[160px]"
         style={{
           background:
             "radial-gradient(circle, var(--accent-1) 0%, transparent 70%)",
