@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const TRAIL_LENGTH = 12;
+const TRAIL_LENGTH = 6;
 
 export default function CustomCursor() {
   const cursorRef = useRef(null);
