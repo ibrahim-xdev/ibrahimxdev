@@ -11,9 +11,9 @@ export default function AuroraBackground() {
     const ctx = gsap.context(() => {
       blobs.forEach((blob, i) => {
         gsap.to(blob, {
-          x: `random(-60, 60)`,
-          y: `random(-50, 50)`,
-          duration: 14 + i * 3,
+          x: `random(-100, 100)`,
+          y: `random(-80, 80)`,
+          duration: 18 + i * 4,
           repeat: -1,
           yoyo: true,
           ease: "sine.inOut",
@@ -30,9 +30,9 @@ export default function AuroraBackground() {
       aria-hidden="true"
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
     >
-      {/* Purple / Blue Glow */}
+      {/* Purple Glow */}
       <div
-        className="aurora-blob absolute -top-40 left-[10%] h-[32rem] w-[32rem] rounded-full opacity-30 blur-[150px]"
+        className="aurora-blob absolute -top-48 left-[5%] h-[38rem] w-[38rem] rounded-full opacity-25 blur-[180px]"
         style={{
           background:
             "radial-gradient(circle, var(--accent-1) 0%, transparent 70%)",
@@ -41,16 +41,16 @@ export default function AuroraBackground() {
 
       {/* Cyan Glow */}
       <div
-        className="aurora-blob absolute top-1/3 right-[5%] h-[26rem] w-[26rem] rounded-full opacity-25 blur-[140px]"
+        className="aurora-blob absolute top-[30%] right-[-5%] h-[34rem] w-[34rem] rounded-full opacity-20 blur-[180px]"
         style={{
           background:
             "radial-gradient(circle, var(--accent-2) 0%, transparent 70%)",
         }}
       />
 
-      {/* Bottom Glow */}
+      {/* Bottom Purple Glow */}
       <div
-        className="aurora-blob absolute bottom-0 left-[25%] h-[30rem] w-[30rem] rounded-full opacity-15 blur-[160px]"
+        className="aurora-blob absolute bottom-[-10%] left-[25%] h-[36rem] w-[36rem] rounded-full opacity-15 blur-[200px]"
         style={{
           background:
             "radial-gradient(circle, var(--accent-1) 0%, transparent 70%)",
