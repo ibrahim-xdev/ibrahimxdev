@@ -1,6 +1,7 @@
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import useScrollReveal from "../hooks/useScrollReveal";
 import { projects } from "../data/content";
+import Container from "./Container";
 
 function ProjectCard({ project }) {
   return (
@@ -64,9 +65,11 @@ function ProjectCard({ project }) {
 
 function EmptyState() {
   return (
-    <div className="project-reveal glass rounded-3xl border-dashed p-10 text-center">
-      <p className="font-medium text-lg">Projects coming soon</p>
-      {/* <p
+    <Container>
+      {" "}
+      <div className="project-reveal glass rounded-3xl border-dashed p-10 text-center">
+        <p className="font-medium text-lg">Projects coming soon</p>
+        {/* <p
         className="mx-auto mt-2 max-w-md text-sm leading-relaxed"
         style={{ color: "var(--text-muted)" }}
       >
@@ -75,7 +78,8 @@ function EmptyState() {
         <code className="font-[var(--font-mono)]">src/data/content.js</code>{" "}
         and they'll appear here as cards automatically.
       </p> */}
-    </div>
+      </div>
+    </Container>
   );
 }
 
@@ -84,29 +88,31 @@ export default function Projects() {
 
   return (
     <section id="projects" ref={rootRef} className="relative py-24 sm:py-32">
-      <div className="mx-auto max-w-5xl px-6">
-        <div className="project-reveal mb-12">
-          <p
-            className="font-(--font-mono)] text-xs tracking-widest"
-            style={{ color: "var(--accent-2)" }}
-          >
-            PROJECTS
-          </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-            Selected work
-          </h2>
-        </div>
-
-        {projects.length > 0 ? (
-          <div className="grid gap-6 sm:grid-cols-2">
-            {projects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
-            ))}
+      <Container>
+        <div className="mx-auto max-w-4xl">
+          <div className="project-reveal mb-12">
+            <p
+              className="font-(--font-mono)] text-xs tracking-widest"
+              style={{ color: "var(--accent-2)" }}
+            >
+              PROJECTS
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+              Selected work
+            </h2>
           </div>
-        ) : (
-          <EmptyState />
-        )}
-      </div>
+
+          {projects.length > 0 ? (
+            <div className="grid gap-6 sm:grid-cols-2">
+              {projects.map((project) => (
+                <ProjectCard key={project.title} project={project} />
+              ))}
+            </div>
+          ) : (
+            <EmptyState />
+          )}
+        </div>
+      </Container>
     </section>
   );
 }

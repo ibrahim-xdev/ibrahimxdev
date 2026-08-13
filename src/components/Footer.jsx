@@ -1,15 +1,22 @@
 import { profile } from "../data/content";
+import Container from "./Container";
 
 export default function Footer() {
   return (
     <footer className="relative py-8">
-      <div
-        className="mx-auto max-w-6xl px-6 text-center font-[var(--font-mono)] text-xs"
-        style={{ color: "var(--text-muted)" }}
-      >
-        © {new Date().getFullYear()} {profile.name}. Built with React, Vite
-        & Tailwind.
-      </div>
+      <Container>
+        {" "}
+        <div className="max-w-4xl mx-auto border border-slate-700"></div>
+        <div
+          className="flex justify-between mt-3 mx-auto max-w-4xl text-center font-[var(--font-mono)] text-xs"
+          style={{ color: "var(--text-muted)" }}
+        >
+          <p>
+            © {new Date().getFullYear()} {profile.name}
+          </p>{" "}
+          <p>Built with React, Vite & Tailwind.</p>
+        </div>
+      </Container>
     </footer>
   );
 }

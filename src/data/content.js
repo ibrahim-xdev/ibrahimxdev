@@ -5,15 +5,16 @@ export const profile = {
   email: "mi6054342@gmail.com",
   phone: "+92-317-591-7636",
   socials: {
-    github: "https://github.com/ibrahim-2711",
+    github: "https://github.com/ibrahim-xdev",
     linkedin: "https://www.linkedin.com/in/muhammad-ibrahim-22b0332b7",
   },
 };
 
 export const about = {
   paragraphs: [
-    "I'm Muhammad Ibrahim, a full stack web developer and AI engineer focused on building scalable applications end to end — from database design and backend APIs to polished, responsive interfaces.",
-    "I enjoy combining traditional web development with AI-powered features, working across the stack to turn ideas into working software.",
+    "Full Stack and AI-Powered Web Applications with hands-on experience, focused on building scalable applications end-to-end, from database design and backend APIs to polished, responsive interfaces.",
+    "Strong Foundation in React, Express.js & PostgreSQL with proven expertise in frontend and backend",
+    "Passionate about creating AI-powered products that solve real-world problems and drive measurable business impact.",
   ],
 };
 

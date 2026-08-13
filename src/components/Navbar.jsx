@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
 import { useTheme } from "../context/ThemeContext";
+import Container from "./Container";
 
 const links = [
   { href: "#about", label: "About" },
@@ -27,63 +28,68 @@ export default function Navbar() {
         scrolled ? "py-3" : "py-5"
       }`}
     >
-      <nav
-        className={`mx-auto flex max-w-6xl items-center justify-between rounded-2xl px-5 py-3 transition-all duration-300 sm:px-6 ${
-          scrolled ? "glass-strong" : ""
-        }`}
-      >
-        <a
-          href="#top"
-          className="font-[var(--font-display)] text-lg font-semibold tracking-tight"
-          style={{ color: "var(--text)" }}
+      <Container>
+        {" "}
+        <nav
+          className={`flex items-center justify-between rounded-2xl py-3 transition-all duration-300 sm:px-6 ${
+            scrolled ? "glass-strong" : ""
+          }`}
         >
-          ~/Muhammad<span className="text-gradient"> Ibrahim</span>
-        </a>
+          <a
+            href="#top"
+            className="font-[var(--font-display)] text-lg font-semibold tracking-tight"
+            style={{ color: "var(--text)" }}
+          >
+            ~/Muhammad<span className="text-gradient"> Ibrahim</span>
+          </a>
 
-        <div className="hidden items-center gap-8 md:flex">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium transition-colors"
-              style={{ color: "var(--text-muted)" }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.color = "var(--text)")
+          <div className="hidden items-center gap-8 md:flex">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium transition-colors"
+                style={{ color: "var(--text-muted)" }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.color = "var(--text)")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.color = "var(--text-muted)")
+                }
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              aria-label={
+                theme === "dark"
+                  ? "Switch to light mode"
+                  : "Switch to dark mode"
               }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.color = "var(--text-muted)")
-              }
+              className="glass flex h-9 w-9 items-center justify-center rounded-full transition-transform hover:scale-105"
             >
-              {link.label}
-            </a>
-          ))}
-        </div>
+              {theme === "dark" ? (
+                <FiSun size={16} style={{ color: "var(--accent-2)" }} />
+              ) : (
+                <FiMoon size={16} style={{ color: "var(--accent-1)" }} />
+              )}
+            </button>
 
-        <div className="flex items-center gap-2">
-          <button
-            onClick={toggleTheme}
-            aria-label={
-              theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
-            }
-            className="glass flex h-9 w-9 items-center justify-center rounded-full transition-transform hover:scale-105"
-          >
-            {theme === "dark" ? (
-              <FiSun size={16} style={{ color: "var(--accent-2)" }} />
-            ) : (
-              <FiMoon size={16} style={{ color: "var(--accent-1)" }} />
-            )}
-          </button>
-
-          <button
-            className="glass flex h-9 w-9 items-center justify-center rounded-full md:hidden"
-            onClick={() => setOpen((o) => !o)}
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-          >
-            {open ? <FiX size={18} /> : <FiMenu size={18} />}
-          </button>
-        </div>
-      </nav>
+            <button
+              className="glass flex h-9 w-9 items-center justify-center rounded-full md:hidden"
+              onClick={() => setOpen((o) => !o)}
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+            >
+              {open ? <FiX size={18} /> : <FiMenu size={18} />}
+            </button>
+          </div>
+        </nav>
+      </Container>
 
       {open && (
         <div className="glass-strong mx-4 mt-2 flex flex-col gap-1 rounded-2xl p-3 md:hidden">
