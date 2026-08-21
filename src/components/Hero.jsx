@@ -88,47 +88,64 @@ export default function Hero() {
           </div>
 
           <div className="hero-card relative mx-auto w-full max-w-sm">
-            <div className="group glass-strong glow-ring relative overflow-hidden rounded-3xl p-8 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/30">
+            <div className="group glow-ring relative overflow-hidden rounded-3xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/30">
               {/* Hover Glow */}
               <div
-                className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-60"
+                className="pointer-events-none absolute -right-16 -top-16 z-10 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-60"
                 style={{
                   background:
                     "radial-gradient(circle, var(--accent-1) 0%, transparent 70%)",
                 }}
               />
 
-              <p
-                className="relative font-[var(--font-mono)] text-xs"
-                style={{ color: "var(--text-muted)" }}
-              >
-                Currently building
-              </p>
+              {/* Profile photo */}
+              <img
+                src={profile.photo}
+                alt={profile.name}
+                className="aspect-[4/5] w-full object-cover"
+              />
 
-              <p className="relative mt-3 font-[var(--font-display)] text-lg font-semibold">
-                Scalable web apps
-                <br />& AI-driven software
-              </p>
+              {/* Gradient so the badge stays readable over any photo */}
+              <div
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-28"
+                style={{
+                  background:
+                    "linear-gradient(to top, rgba(0,0,0,0.75), transparent)",
+                }}
+              />
 
-              <div className="relative mt-6 space-y-3">
-                {["Frontend", "Backend", "AI / ML"].map((row, i) => (
-                  <div key={row} className="flex items-center gap-3">
-                    <span
-                      className="h-1.5 w-1.5 flex-shrink-0 rounded-full"
-                      style={{
-                        background:
-                          i % 2 === 0 ? "var(--accent-1)" : "var(--accent-2)",
-                      }}
-                    />
+              {/* Floating info badge */}
+              <div className="glass-strong absolute inset-x-4 bottom-4 rounded-2xl p-4">
+                <p
+                  className="font-[var(--font-mono)] text-xs"
+                  style={{ color: "var(--text-muted)" }}
+                >
+                  Currently building
+                </p>
 
-                    <span
-                      className="font-[var(--font-mono)] text-sm"
-                      style={{ color: "var(--text-muted)" }}
-                    >
-                      {row}
-                    </span>
-                  </div>
-                ))}
+                <p className="mt-1 font-[var(--font-display)] text-base font-semibold text-white">
+                  Scalable web apps &amp; AI-driven software
+                </p>
+
+                <div className="mt-3 flex flex-wrap gap-3">
+                  {["Frontend", "Backend", "AI / ML"].map((row, i) => (
+                    <div key={row} className="flex items-center gap-2">
+                      <span
+                        className="h-1.5 w-1.5 flex-shrink-0 rounded-full"
+                        style={{
+                          background:
+                            i % 2 === 0 ? "var(--accent-1)" : "var(--accent-2)",
+                        }}
+                      />
+                      <span
+                        className="font-[var(--font-mono)] text-xs"
+                        style={{ color: "var(--text-muted)" }}
+                      >
+                        {row}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
