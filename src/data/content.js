@@ -1,4 +1,9 @@
+// ============================================================
+// src/data/content.js — Add these projects to your portfolio
+// ============================================================
+
 import hero_img from "../assets/hero_img.png";
+
 export const profile = {
   name: "Muhammad Ibrahim",
   title: "Full Stack Web Developer & AI Engineer",
@@ -54,13 +59,67 @@ export const skillGroups = [
   },
 ];
 
-// Add your projects here — this is the only file you need to touch.
-// Example shape:
-// {
-//   title: "TrustNet",
-//   description: "Full-stack recruitment & candidate verification platform.",
-//   tags: ["React", "Node.js", "FastAPI", "Solidity"],
-//   link: "https://github.com/ibrahim-2711/trustnet",
-//   repo: "https://github.com/ibrahim-2711/trustnet",
-// }
-export const projects = [];
+// ============================================================
+//  PROJECTS — Add your work here
+// ============================================================
+//  Each project supports:
+//    title       — string (required)
+//    description — string (required)
+//    tags        — string[] (optional)
+//    link        — string (optional) live demo URL
+//    repo        — string (optional) GitHub repo URL
+// ============================================================
+
+export const projects = [
+  {
+    title: "Job Application Form",
+    description:
+      "Simple job application form with an Express backend that scores applicants by experience level and returns an eligibility status.",
+    tags: [
+      "HTML5",
+      "CSS3",
+      "JavaScript(ES6+)",
+      "Node.js",
+      "Express.js",
+      "File system (built-in path)",
+      "In‑memory storage",
+    ],
+    link: "https://application-form-ra86.onrender.com/",
+    repo: "https://github.com/ibrahim-xdev/application-form",
+  },
+  // ────────────────────────────────────────────────────────────────
+  //  1. TrustNet — Recruitment & Candidate Verification
+  // ────────────────────────────────────────────────────────────────
+  {
+    title: "ResumeCraft",
+    description:
+      "A live, browser-based resume builder with instant template switching, a resume strength meter, and a built-in analyzer — pure HTML, CSS & JS.",
+    tags: ["HTML5", "CSS3", "JavaScript(ES6+)", "localStorage"],
+    link: "https://ibrahim-xdev.github.io/resume-craft/",
+    repo: "https://github.com/ibrahim-xdev/resume-craft",
+  },
+
+  // ────────────────────────────────────────────────────────────────
+  //  2. AI Resume Analyzer — Smart CV Parsing
+  // ────────────────────────────────────────────────────────────────
+  {
+    title: "Gratitude Jar",
+    description:
+      "A cozy digital gratitude jar - write down things you're thankful for, watch them collect as gems in a jar, and pull a random one anytime you need a lift. Built with HTML + CSS + JS.",
+    tags: ["HTML5", "CSS3", "JavaScript(ES6+)", "localStorage"],
+    link: "https://ibrahim-xdev.github.io/gratitude-jar/",
+    repo: "https://github.com/ibrahim-xdev/gratitude-jar",
+  },
+
+  // ────────────────────────────────────────────────────────────────
+  //  3. TaskFlow — Real‑time Project Management
+  // ────────────────────────────────────────────────────────────────
+  {
+    title: "Daily Intention & Reflection",
+    description:
+      "Set a daily intention and reflect each evening. A simple, private, web app with mood tracking, rating, streak counter, and dark mode – all stored in your browser.",
+    tags: ["HTML5", "CSS3", "JavaScript(ES6+)", "localStorage"],
+    link: "https://ibrahim-xdev.github.io/Daily-Intention-Reflection/",
+    repo: "https://github.com/ibrahim-xdev/Daily-Intention-Reflection",
+  },
+];
