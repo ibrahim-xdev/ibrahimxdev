@@ -93,7 +93,7 @@ export const projects = [
   {
     title: "ResumeCraft",
     description:
-      "A live, browser-based resume builder with instant template switching, a resume strength meter, and a built-in analyzer — pure HTML, CSS & JS.",
+      "A live, browser-based resume builder with instant template switching, a resume strength meter, and a built-in analyzer.",
     tags: ["HTML5", "CSS3", "JavaScript(ES6+)", "localStorage"],
     link: "https://ibrahim-xdev.github.io/resume-craft/",
     repo: "https://github.com/ibrahim-xdev/resume-craft",
@@ -105,7 +105,7 @@ export const projects = [
   {
     title: "Gratitude Jar",
     description:
-      "A cozy digital gratitude jar - write down things you're thankful for, watch them collect as gems in a jar, and pull a random one anytime you need a lift. Built with HTML + CSS + JS.",
+      "A cozy digital gratitude jar - write down things you're thankful for, watch them collect as gems in a jar, and pull a random one anytime you need a lift.",
     tags: ["HTML5", "CSS3", "JavaScript(ES6+)", "localStorage"],
     link: "https://ibrahim-xdev.github.io/gratitude-jar/",
     repo: "https://github.com/ibrahim-xdev/gratitude-jar",
