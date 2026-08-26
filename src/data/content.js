@@ -57,6 +57,10 @@ export const skillGroups = [
     label: "Tools & Data",
     skills: ["Git", "GitHub", "VS Code", "DBMS"],
   },
+  {
+    label: "Database",
+    skills: ["MYSQL", "SQLITE", "PostgreSQL", "MongoDB"],
+  },
 ];
 
 // ============================================================
