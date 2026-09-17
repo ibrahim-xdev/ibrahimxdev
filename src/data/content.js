@@ -8,7 +8,7 @@ export const profile = {
   name: "Muhammad Ibrahim",
   title: "Full Stack Web Developer & AI Engineer",
   tagline: "Building scalable web applications and AI software.",
-  email: "mi6054342@gmail.com",
+  email: "ibrahimxdev77@gmail.com",
   phone: "+92-317-591-7636",
   photo: hero_img,
   socials: {
